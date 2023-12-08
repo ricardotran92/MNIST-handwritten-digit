@@ -19,9 +19,10 @@ if image is not None:
   st.image(image, caption='Test image')
   
   if st.button('Predict'):
-    image = image.resize((227*227*3, 1)) # cột là 1
-    vector = np.array(image)
-    label = str((model.predict(vector))[0]) # chuyển đổi df về dạng kết quả 0/1
+    image = image.resize((8*8, 1)) # cột là 1
+    feature_vector = np.array(image)
+    
+    label = str((model.predict(feature_vector))[0]) # chuyển đổi df về dạng kết quả 0/1
 
     st.header('Result')
     st.text(label)
