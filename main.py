@@ -4,9 +4,9 @@ import pickle as pkl
 import numpy as np
 
 
-class_list = {'0': 'Normal', '1': 'Pneumonia'}
+# class_list = {'0': 'Normal', '1': 'Pneumonia'}
 
-st.title('Pneumonia Detection')
+st.title('Hand written digit classification')
 
 input = open('lrc_xray.pkl', 'rb')
 model = pkl.load(input)
