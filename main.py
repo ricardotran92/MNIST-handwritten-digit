@@ -11,7 +11,7 @@ st.title('Hand written digit classification')
 input = open('lrc_mnist.pkl', 'rb')
 model = pkl.load(input)
 
-st.header('Upload an image')
+st.header('Upload an image 8*8*1')
 image = st.file_uploader('Choose an image', type=(['png', 'jpg', 'jpeg']))
 
 if image is not None:
