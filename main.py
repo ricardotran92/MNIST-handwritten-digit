@@ -8,7 +8,7 @@ import numpy as np
 
 st.title('Hand written digit classification')
 
-input = open('lrc_xray.pkl', 'rb')
+input = open('lrc_mnist.pkl', 'rb')
 model = pkl.load(input)
 
 st.header('Upload an image')
@@ -24,4 +24,6 @@ if image is not None:
     label = str((model.predict(vector))[0]) # chuyển đổi df về dạng kết quả 0/1
 
     st.header('Result')
-    st.text(class_list[label])
+    st.text(label)
+    # st.text(class_list[label])
+
